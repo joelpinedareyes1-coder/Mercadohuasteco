@@ -1,0 +1,416 @@
+/*
+ * Header Responsivo para Mercado Huasteco
+ * Diseño limpio con menú hamburguesa para móviles
+ */
+
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #006666;
+    --secondary-color: #CC5500;
+    --accent-color: #FF6B6B;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --text-secondary: #666666;
+    --background-white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== HEADER PRINCIPAL ===== */
+.mi-navbar-principal {
+    background: var(--background-white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== ÁREA DEL LOGO ===== */
+.navbar-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo-sombrero {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo-text p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1;
+}
+
+/* ===== BOTÓN HAMBURGUESA (OCULTO EN DESKTOP) ===== */
+.btn-menu-movil {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.btn-menu-movil:hover {
+    background: rgba(0, 102, 102, 0.1);
+}
+
+/* ===== NAVEGACIÓN ===== */
+.navbar-links-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    border-radius: 8px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: rgba(0, 102, 102, 0.1);
+    color: var(--primary-color);
+}
+
+.nav-btn i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* ===== BOTONES DE AUTENTICACIÓN ===== */
+.auth-btn {
+    background: var(--primary-color);
+    color: var(--text-light) !important;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.auth-btn:hover {
+    background: #004d4d;
+    color: var(--text-light) !important;
+    transform: translateY(-2px);
+}
+
+.register-btn {
+    background: var(--accent-color);
+}
+
+.register-btn:hover {
+    background: #ff5252;
+}
+
+/* ===== DROPDOWN DE USUARIO ===== */
+.user-dropdown {
+    position: relative;
+}
+
+.user-btn {
+    background: rgba(0, 102, 102, 0.1);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color) !important;
+}
+
+.user-name {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu-custom {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--background-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 10px 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    margin-top: 5px;
+}
+
+.dropdown-menu-custom.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 102, 102, 0.1);
+    color: var(--primary-color);
+}
+
+.dropdown-item.logout:hover {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #e9ecef;
+    margin: 5px 0;
+}
+
+/* ===== AJUSTE DEL CONTENIDO PRINCIPAL ===== */
+.main-content {
+    margin-top: 70px;
+}
+
+/* ===== RESPONSIVE PARA MÓVILES ===== */
+@media (max-width: 768px) {
+
+    /* Header más compacto */
+    .mi-navbar-principal {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    /* Logo más pequeño */
+    .logo-sombrero {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-text h1 {
+        font-size: 1rem;
+    }
+
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .btn-menu-movil {
+        display: block;
+    }
+
+    /* Ocultar navegación por defecto */
+    .navbar-links-area {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--background-white);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    /* Mostrar navegación cuando está activa */
+    .navbar-links-area.mobile-active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Botones de navegación en móvil */
+    .nav-btn {
+        justify-content: flex-start;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .nav-btn i {
+        font-size: 1.2rem;
+        width: 20px;
+    }
+
+    /* Botones de autenticación en móvil */
+    .auth-btn {
+        margin: 10px 0;
+        padding: 15px 20px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    /* Dropdown de usuario en móvil */
+    .user-dropdown {
+        width: 100%;
+    }
+
+    .user-btn {
+        width: 100%;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .dropdown-menu-custom {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(0, 102, 102, 0.05);
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+
+    .dropdown-item {
+        padding: 12px 20px;
+    }
+
+    /* Ajustar contenido principal */
+    .main-content {
+        margin-top: 60px;
+    }
+}
+
+/* ===== MÓVILES PEQUEÑOS ===== */
+@media (max-width: 480px) {
+    .mi-navbar-principal {
+        padding: 0 10px;
+    }
+
+    .logo-sombrero {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-text h1 {
+        font-size: 0.9rem;
+    }
+
+    .logo-text p {
+        display: none;
+    }
+
+    .navbar-links-area {
+        padding: 15px;
+    }
+
+    .nav-btn {
+        padding: 12px 15px;
+    }
+}
+
+/* ===== LANDSCAPE EN MÓVIL ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .mi-navbar-principal {
+        height: 50px;
+    }
+
+    .navbar-links-area {
+        top: 50px;
+        max-height: calc(100vh - 50px);
+    }
+
+    .main-content {
+        margin-top: 50px;
+    }
+
+    .logo-text p {
+        display: none;
+    }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar-links-area.mobile-active {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* ===== MEJORAS DE ACCESIBILIDAD ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visible para navegación por teclado */
+.nav-btn:focus,
+.btn-menu-movil:focus,
+.dropdown-item:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ===== OPTIMIZACIONES PARA TOUCH ===== */
+@media (max-width: 768px) {
+
+    .nav-btn,
+    .btn-menu-movil,
+    .dropdown-item {
+        min-height: 44px;
+        /* Área táctil mínima recomendada */
+        -webkit-tap-highlight-color: rgba(0, 102, 102, 0.2);
+    }
+}

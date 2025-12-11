@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Círculo de fondo dorado -->
+  <circle cx="50" cy="50" r="48" fill="url(#goldGradient)" stroke="#ffa500" stroke-width="2"/>
+  
+  <!-- Gradiente dorado -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffed4e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sombra para profundidad -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Sombrero Mexicano -->
+  <g transform="translate(50, 30)">
+    <!-- Ala del sombrero -->
+    <ellipse cx="0" cy="8" rx="28" ry="8" fill="#7cb342" opacity="0.9"/>
+    <ellipse cx="0" cy="7" rx="28" ry="7" fill="#8bc34a"/>
+    
+    <!-- Decoración del ala -->
+    <path d="M -20,7 Q -15,5 -10,7 Q -5,5 0,7 Q 5,5 10,7 Q 15,5 20,7" 
+          stroke="#558b2f" stroke-width="1.5" fill="none"/>
+    
+    <!-- Copa del sombrero -->
+    <path d="M -12,7 L -10,-5 Q -10,-8 0,-10 Q 10,-8 10,-5 L 12,7 Z" 
+          fill="#9ccc65"/>
+    <path d="M -10,7 L -8,-4 Q -8,-7 0,-8 Q 8,-7 8,-4 L 10,7 Z" 
+          fill="#aed581"/>
+    
+    <!-- Decoración de la copa -->
+    <rect x="-10" y="0" width="20" height="2" fill="#558b2f" rx="1"/>
+    <circle cx="-6" cy="1" r="1.5" fill="#ffd700"/>
+    <circle cx="0" cy="1" r="1.5" fill="#ffd700"/>
+    <circle cx="6" cy="1" r="1.5" fill="#ffd700"/>
+    
+    <!-- Punta del sombrero -->
+    <ellipse cx="0" cy="-10" rx="3" ry="2" fill="#7cb342"/>
+  </g>
+  
+  <!-- Carrito de compras -->
+  <g transform="translate(50, 65)">
+    <!-- Cuerpo del carrito -->
+    <path d="M -8,-8 L -6,-2 L 6,-2 L 8,-8 Z" fill="#1976d2" stroke="#0d47a1" stroke-width="1"/>
+    <rect x="-6" y="-2" width="12" height="6" fill="#2196f3" stroke="#0d47a1" stroke-width="1" rx="1"/>
+    
+    <!-- Líneas del carrito -->
+    <line x1="-4" y1="-1" x2="-4" y2="3" stroke="#0d47a1" stroke-width="0.8"/>
+    <line x1="0" y1="-1" x2="0" y2="3" stroke="#0d47a1" stroke-width="0.8"/>
+    <line x1="4" y1="-1" x2="4" y2="3" stroke="#0d47a1" stroke-width="0.8"/>
+    
+    <!-- Ruedas -->
+    <circle cx="-4" cy="6" r="2" fill="#424242" stroke="#212121" stroke-width="0.8"/>
+    <circle cx="-4" cy="6" r="1" fill="#757575"/>
+    <circle cx="4" cy="6" r="2" fill="#424242" stroke="#212121" stroke-width="0.8"/>
+    <circle cx="4" cy="6" r="1" fill="#757575"/>
+    
+    <!-- Manija del carrito -->
+    <path d="M 8,-8 L 10,-10 L 11,-10" stroke="#0d47a1" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Brillo superior -->
+  <ellipse cx="35" cy="25" rx="15" ry="8" fill="white" opacity="0.3"/>
+</svg>

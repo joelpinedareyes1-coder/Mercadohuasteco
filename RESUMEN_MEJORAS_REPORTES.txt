@@ -1,0 +1,144 @@
+╔══════════════════════════════════════════════════════════════╗
+║          PANEL DE REPORTES - MEJORAS IMPLEMENTADAS          ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ INFORMACIÓN COMPLETA DE LA TIENDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📦 Datos de la Tienda:
+   • Logo
+   • Nombre (con enlace)
+   • Descripción
+   • Dirección
+   • Teléfono
+   • WhatsApp
+   • Fecha de registro
+   • Estado (activa/desactivada)
+   • Total de reportes recibidos
+
+👤 Datos del Vendedor:
+   • Nombre completo
+   • Email (clickeable)
+   • Estado de cuenta
+
+🚩 Datos del Reporte:
+   • Motivo completo
+   • Fecha y hora
+   • Quién reportó
+   • Email del reportante
+
+
+✅ ACCIONES DISPONIBLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 🔵 VER TIENDA
+   → Abre la tienda en nueva pestaña
+   → Revisa el contenido reportado
+
+2. 🟢 MARCAR COMO RESUELTO
+   → Sin tomar acciones sobre la tienda
+   → Agregar notas administrativas
+   → Archivar el reporte
+
+3. 🟡 DESACTIVAR TIENDA (Temporal)
+   → La tienda desaparece del directorio
+   → Vendedor no puede acceder
+   → SE PUEDE REACTIVAR
+   → Requiere motivo
+   → Marca reporte como resuelto
+
+4. 🔵 REACTIVAR TIENDA
+   → Solo si está desactivada
+   → Restaura acceso completo
+   → Vuelve al directorio
+
+5. 🔴 ELIMINAR TIENDA (Permanente)
+   → IRREVERSIBLE - NO SE PUEDE DESHACER
+   → Elimina TODO (tienda, fotos, calificaciones)
+   → Requiere motivo + checkbox + confirmación
+   → Solo para casos graves
+
+
+📊 COMPARACIÓN: DESACTIVAR vs ELIMINAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                    DESACTIVAR          ELIMINAR
+                    ──────────          ────────
+Reversible          ✅ SÍ               ❌ NO
+Datos conservados   ✅ SÍ               ❌ NO
+Se puede reactivar  ✅ SÍ               ❌ NO
+Calificaciones      ✅ Conservadas      ❌ Eliminadas
+Fotos               ✅ Conservadas      ❌ Eliminadas
+Uso recomendado     Problemas leves     Casos graves
+
+
+🎯 FLUJO RECOMENDADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+REPORTE LEVE (Falso o menor):
+1. Ver tienda
+2. Verificar contenido
+3. Marcar como resuelto
+4. Agregar notas
+
+REPORTE MODERADO (Contenido inapropiado):
+1. Ver tienda
+2. Verificar problema
+3. Desactivar tienda
+4. Contactar vendedor
+5. Cuando se corrija → Reactivar
+
+REPORTE GRAVE (Ilegal/Fraude):
+1. Ver tienda
+2. Confirmar gravedad
+3. Eliminar permanentemente
+4. Documentar motivo legal
+
+
+🔒 SEGURIDAD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Confirmación para desactivar
+✅ Doble confirmación para eliminar
+✅ Checkbox obligatorio para eliminar
+✅ Motivos obligatorios
+✅ Todo queda registrado
+✅ Solo admins pueden acceder
+
+
+💡 CONSEJOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Siempre verifica antes de actuar
+• Documenta todas las acciones
+• Contacta al vendedor cuando sea posible
+• Usa desactivar para problemas temporales
+• Elimina solo en casos graves
+• Revisa si hay múltiples reportes
+
+
+🎨 DISEÑO VISUAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Tarjetas con código de colores
+• Información organizada en secciones
+• Botones con iconos claros
+• Modales con advertencias visuales
+• Responsive (funciona en móvil)
+• Hover effects en botones
+
+
+📱 ACCESO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+URL: http://tu-dominio.com/admin_ver_reportes.php
+
+Requisito: Estar logueado como administrador
+
+
+✨ RESULTADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Ahora puedes:
+✅ Ver toda la información de tiendas reportadas
+✅ Ver datos del vendedor y contactarlo
+✅ Tomar acciones directas (desactivar/eliminar)
+✅ Documentar todas tus decisiones
+✅ Reactivar tiendas cuando sea necesario
+✅ Mantener tu plataforma segura
+
+¡Sistema de moderación completo y profesional! 🎉

@@ -1,0 +1,117 @@
+========================================
+INSTALACIÓN DE OFERTAS PREMIUM MEJORADAS
+========================================
+
+PASO 1: EJECUTAR SCRIPT SQL
+----------------------------
+Opción A - Desde línea de comandos:
+mysql -u tu_usuario -p tu_base_de_datos < agregar_campos_ofertas_mejoradas.sql
+
+Opción B - Desde phpMyAdmin:
+1. Abre phpMyAdmin
+2. Selecciona tu base de datos
+3. Ve a la pestaña "SQL"
+4. Copia y pega el contenido de: agregar_campos_ofertas_mejoradas.sql
+5. Haz clic en "Continuar"
+
+Opción C - Desde PHP:
+php ejecutar_mejoras_ofertas.php
+
+
+PASO 2: VERIFICAR ARCHIVOS ACTUALIZADOS
+----------------------------------------
+✓ ofertas.php - Vista pública con filtros y nuevos estilos
+✓ mis_ofertas.php - Panel de gestión con nuevos campos
+✓ css/ofertas-styles.css - Estilos premium con animaciones
+✓ agregar_campos_ofertas_mejoradas.sql - Script de base de datos
+
+
+PASO 3: PROBAR EL SISTEMA
+--------------------------
+1. Accede como vendedor Premium
+2. Ve a "Mis Ofertas"
+3. Crea una nueva oferta usando los nuevos campos:
+   - Código de cupón
+   - Stock limitado
+   - Link de producto
+   - Imagen promocional
+   - Marcar como destacada
+   - Color personalizado
+   - Términos y condiciones
+
+4. Visita ofertas.php para ver el resultado
+
+
+NUEVAS FUNCIONALIDADES DISPONIBLES
+-----------------------------------
+✨ Código de cupón copiable con un clic
+📦 Stock limitado con barra de progreso
+⭐ Ofertas destacadas que aparecen primero
+🎨 Color personalizado para badges
+🔗 Enlaces directos a productos
+🖼️ Imágenes promocionales
+📊 Estadísticas de vistas y clics
+🔍 Filtros por categoría y ordenamiento
+📝 Términos y condiciones expandibles
+💫 Animaciones y efectos visuales premium
+
+
+ESTILOS CSS MEJORADOS
+----------------------
+- Gradientes animados
+- Efectos hover 3D
+- Animaciones de entrada
+- Bordes con efecto shimmer
+- Badges con pulse animation
+- Diseño responsive mejorado
+- Efectos parallax
+- Transiciones suaves
+
+
+SOLUCIÓN DE PROBLEMAS
+----------------------
+Si las ofertas no se muestran:
+- Verifica que ejecutaste el SQL correctamente
+- Confirma que la tienda sea Premium
+- Revisa que las ofertas estén activas
+
+Si los estilos no se aplican:
+- Limpia caché del navegador (Ctrl+F5)
+- Verifica que css/ofertas-styles.css exista
+- Revisa la consola del navegador
+
+Si el código no se copia:
+- Usa un navegador moderno (Chrome, Firefox, Safari)
+- Verifica permisos de clipboard
+
+
+EJEMPLOS DE USO
+---------------
+Ejemplo 1 - Oferta con código:
+Título: 20% OFF en toda la tienda
+Código: VERANO2024
+Porcentaje: 20
+Stock: 100
+Destacado: ✓
+
+Ejemplo 2 - Oferta con producto:
+Título: 2x1 en Zapatos
+Link: https://mitienda.com/zapatos
+Imagen: https://mitienda.com/promo.jpg
+Categoría: 2x1
+
+Ejemplo 3 - Oferta destacada:
+Título: Envío Gratis +$500
+Destacado: ✓
+Términos: "Válido solo para compras mayores a $500"
+
+
+¡LISTO! 🎉
+----------
+Ahora tienes un sistema de ofertas premium con:
+✓ Diseño moderno y atractivo
+✓ Funcionalidades avanzadas
+✓ Métricas y estadísticas
+✓ Experiencia de usuario mejorada
+
+Para más detalles, consulta: OFERTAS_PREMIUM_MEJORADAS.md

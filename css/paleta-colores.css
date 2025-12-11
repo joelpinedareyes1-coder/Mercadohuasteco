@@ -1,0 +1,210 @@
+/* 
+ * Paleta de Colores Elegante y Profesional
+ * Directorio de Tiendas Locales
+ */
+
+:root {
+    /* Colores principales */
+    --color-principal: #006666;        /* Verde Oscuro/Teal */
+    --color-secundario: #CC5500;       /* Naranja Quemado */
+    --color-fondo: #F8F9FA;           /* Neutro Claro */
+    --color-tarjetas: #FFFFFF;        /* Blanco para tarjetas */
+    --color-texto-principal: #333333;  /* Texto principal */
+    --color-texto-secundario: #6c757d; /* Texto secundario/metadatos */
+    
+    /* Variaciones de colores principales */
+    --color-principal-hover: #004d4d;
+    --color-principal-dark: #003333;
+    --color-secundario-hover: #b34700;
+    --color-secundario-light: #ff6600;
+}
+
+/* Aplicación global */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+}
+
+/* Navegación */
+.navbar-dark {
+    background-color: var(--color-principal) !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+/* Botones principales */
+.btn-primary {
+    background: linear-gradient(45deg, var(--color-principal), var(--color-principal-hover));
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--color-principal-hover), var(--color-principal-dark));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 102, 102, 0.4);
+    color: white;
+}
+
+.btn-outline-primary {
+    border-color: var(--color-principal);
+    color: var(--color-principal);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(45deg, var(--color-principal), var(--color-principal-hover));
+    border-color: var(--color-principal);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3);
+    color: white;
+}
+
+/* Botones secundarios */
+.btn-secondary-custom {
+    background: linear-gradient(45deg, var(--color-secundario), var(--color-secundario-light));
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    background: linear-gradient(45deg, var(--color-secundario-hover), var(--color-secundario));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(204, 85, 0, 0.4);
+    color: white;
+}
+
+/* Botón visitar tienda */
+.btn-visitar {
+    background: linear-gradient(45deg, var(--color-principal), var(--color-principal-hover));
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-visitar:hover {
+    background: linear-gradient(45deg, var(--color-principal-hover), var(--color-principal-dark));
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Tarjetas */
+.card {
+    background-color: var(--color-tarjetas);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Secciones con fondo */
+.stats-section,
+.search-section {
+    background: var(--color-tarjetas);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-principal-hover) 100%);
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: var(--color-principal);
+    color: white;
+}
+
+/* Badges y etiquetas */
+.badge.bg-primary {
+    background: linear-gradient(45deg, var(--color-principal), var(--color-principal-hover)) !important;
+}
+
+.badge-destacado {
+    background: linear-gradient(45deg, var(--color-secundario), var(--color-secundario-light));
+    color: white;
+}
+
+.vendedor-badge {
+    background: linear-gradient(45deg, var(--color-texto-secundario), #495057);
+    color: white;
+}
+
+.clics-badge {
+    background: linear-gradient(45deg, var(--color-principal), var(--color-principal-hover));
+    color: white;
+}
+
+/* Tiendas destacadas */
+.tienda-destacada {
+    border: 3px solid var(--color-secundario);
+    box-shadow: 0 8px 25px rgba(204, 85, 0, 0.3);
+}
+
+.tienda-destacada:hover {
+    box-shadow: 0 15px 35px rgba(204, 85, 0, 0.4);
+}
+
+/* Texto */
+.text-muted {
+    color: var(--color-texto-secundario) !important;
+}
+
+.text-success {
+    color: var(--color-principal) !important;
+}
+
+.text-info {
+    color: var(--color-principal) !important;
+}
+
+.text-warning {
+    color: var(--color-secundario) !important;
+}
+
+/* Animaciones para destacados */
+@keyframes pulse-destacado {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(204, 85, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(204, 85, 0, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(204, 85, 0, 0.4);
+    }
+}
+
+/* Utilidades */
+.bg-principal {
+    background-color: var(--color-principal) !important;
+}
+
+.bg-secundario {
+    background-color: var(--color-secundario) !important;
+}
+
+.text-principal {
+    color: var(--color-principal) !important;
+}
+
+.text-secundario {
+    color: var(--color-secundario) !important;
+}
+
+.border-principal {
+    border-color: var(--color-principal) !important;
+}
+
+.border-secundario {
+    border-color: var(--color-secundario) !important;
+}

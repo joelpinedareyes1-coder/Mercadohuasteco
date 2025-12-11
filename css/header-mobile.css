@@ -1,0 +1,1050 @@
+/*
+ * Header móvil optimizado para Mercado Huasteco
+ * Sin menú hamburguesa - Navegación siempre visible
+ */
+
+/* ===== VARIABLES PARA HEADER MÓVIL ===== */
+:root {
+    --header-height-mobile: 70px;
+    --header-height-small: 65px;
+    --header-height-landscape: 60px;
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --header-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    --nav-btn-size: 50px;
+    --nav-btn-size-small: 45px;
+}
+
+/* ===== HEADER BASE MÓVIL ===== */
+@media (max-width: 768px) {
+
+    /* Header principal */
+    .mi-navbar-principal {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
+        background: var(--header-bg) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        box-shadow: var(--header-shadow) !important;
+        padding: 8px 15px !important;
+        min-height: var(--header-height-mobile) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        border-bottom: 1px solid rgba(0, 102, 102, 0.1) !important;
+    }
+
+    /* Efecto de ocultación al scroll */
+    .header-hidden {
+        transform: translateY(-100%) !important;
+        box-shadow: none !important;
+    }
+
+    /* Área del logo compacta */
+    .navbar-logo-area {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .logo-sombrero {
+        width: 40px !important;
+        height: 40px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+    }
+
+    .logo-text {
+        min-width: 0 !important;
+        flex: 1 !important;
+    }
+
+    .logo-text h1 {
+        font-size: 1rem !important;
+        margin: 0 !important;
+        font-weight: 700 !important;
+        color: var(--primary-color) !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .logo-text p {
+        font-size: 0.7rem !important;
+        margin: 0 !important;
+        color: var(--text-secondary) !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Navegación horizontal */
+    .navbar-links-area {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        /* ===== SOLUCIÓN: Asegurar orden correcto de botones ===== */
+        flex-direction: row !important;
+    }
+
+    .navbar-links-area::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Botones de navegación */
+    .nav-btn {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 8px 12px !important;
+        min-width: 60px !important;
+        min-height: var(--nav-btn-size) !important;
+        border-radius: 12px !important;
+        text-decoration: none !important;
+        color: var(--text-secondary) !important;
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        background: transparent !important;
+        border: none !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: rgba(0, 102, 102, 0.2) !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+    }
+    
+    /* Botón Mi Panel - visible solo en móvil */
+    .mobile-panel-btn {
+        background: linear-gradient(135deg, rgba(0, 102, 102, 0.1), rgba(0, 77, 77, 0.1)) !important;
+        border: 2px solid var(--primary-color) !important;
+    }
+    
+    .mobile-panel-btn i {
+        color: var(--primary-color) !important;
+    }
+    
+    .mobile-panel-btn span {
+        color: var(--primary-color) !important;
+        font-weight: 700 !important;
+    }
+    
+    .mobile-panel-btn:hover,
+    .mobile-panel-btn:focus {
+        background: linear-gradient(135deg, var(--primary-color), #004d4d) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3) !important;
+    }
+    
+    .mobile-panel-btn:hover i,
+    .mobile-panel-btn:hover span,
+    .mobile-panel-btn:focus i,
+    .mobile-panel-btn:focus span {
+        color: white !important;
+    }
+
+    .nav-btn i {
+        font-size: 1.2rem !important;
+        margin-bottom: 4px !important;
+        color: var(--primary-color) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .nav-btn span {
+        font-size: 0.7rem !important;
+        line-height: 1 !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* Estados de los botones */
+    .nav-btn:hover,
+    .nav-btn:focus,
+    .nav-btn.active {
+        background: rgba(0, 102, 102, 0.1) !important;
+        color: var(--primary-color) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(0, 102, 102, 0.2) !important;
+    }
+
+    .nav-btn.active i {
+        color: var(--primary-color) !important;
+        transform: scale(1.1) !important;
+    }
+
+    .nav-btn.active span {
+        color: var(--primary-color) !important;
+        font-weight: 700 !important;
+    }
+
+    /* ===== SOLUCIÓN: BOTONES DE AUTENTICACIÓN ESPECÍFICOS ===== */
+    /* Botón de Iniciar Sesión (debe ir a auth.php) */
+    .login-btn {
+        background: linear-gradient(135deg, var(--primary-color), #004d4d) !important;
+        color: white !important;
+        min-width: 70px !important;
+        border-radius: 15px !important;
+        box-shadow: 0 2px 10px rgba(0, 102, 102, 0.3) !important;
+        position: relative !important;
+        overflow: hidden !important;
+        order: 1 !important;
+        /* Asegurar orden correcto */
+    }
+
+    /* Botón de Registrarse (debe ir a auth.php#registro) */
+    .register-btn {
+        background: linear-gradient(135deg, var(--accent-color), var(--secondary-color)) !important;
+        color: white !important;
+        min-width: 70px !important;
+        border-radius: 15px !important;
+        box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3) !important;
+        position: relative !important;
+        overflow: hidden !important;
+        order: 2 !important;
+        /* Asegurar orden correcto */
+    }
+
+    /* Estilos generales para ambos botones auth */
+    .auth-btn {
+        background: linear-gradient(135deg, var(--primary-color), #004d4d) !important;
+        color: white !important;
+        min-width: 70px !important;
+        border-radius: 15px !important;
+        box-shadow: 0 2px 10px rgba(0, 102, 102, 0.3) !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .auth-btn i,
+    .auth-btn span {
+        color: white !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* Hover para botón de login */
+    .login-btn:hover,
+    .login-btn:focus {
+        background: linear-gradient(135deg, #004d4d, var(--primary-color)) !important;
+        color: white !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 15px rgba(0, 102, 102, 0.4) !important;
+    }
+
+    /* Hover para botón de registro */
+    .register-btn:hover,
+    .register-btn:focus {
+        background: linear-gradient(135deg, var(--secondary-color), var(--accent-color)) !important;
+        color: white !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4) !important;
+    }
+
+    /* Hover genérico para auth-btn (fallback) */
+    .auth-btn:hover,
+    .auth-btn:focus {
+        background: linear-gradient(135deg, #004d4d, var(--primary-color)) !important;
+        color: white !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 15px rgba(0, 102, 102, 0.4) !important;
+    }
+
+    /* Efecto de ondas en botones auth */
+    .auth-btn::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        width: 0 !important;
+        height: 0 !important;
+        border-radius: 50% !important;
+        background: rgba(255, 255, 255, 0.3) !important;
+        transform: translate(-50%, -50%) !important;
+        transition: width 0.6s, height 0.6s !important;
+        z-index: 1 !important;
+    }
+
+    .auth-btn:active::before {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    /* Dropdown de usuario */
+    .user-dropdown {
+        position: relative !important;
+    }
+
+    .user-btn {
+        min-width: 80px !important;
+        background: rgba(0, 102, 102, 0.1) !important;
+        border: 2px solid var(--primary-color) !important;
+        color: var(--primary-color) !important;
+    }
+
+    .user-btn i {
+        color: var(--primary-color) !important;
+    }
+
+    .user-btn span {
+        color: var(--primary-color) !important;
+    }
+
+    .user-name {
+        max-width: 60px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
+    .dropdown-arrow {
+        font-size: 0.8rem !important;
+        margin-left: 4px !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    .user-dropdown .dropdown-arrow {
+        transform: rotate(0deg) !important;
+    }
+
+    .dropdown-menu-custom.show~.user-btn .dropdown-arrow,
+    .user-dropdown.show .dropdown-arrow {
+        transform: rotate(180deg) !important;
+    }
+
+    /* Menú dropdown */
+    .dropdown-menu-custom {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        right: 0 !important;
+        background: white !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+        padding: 10px 0 !important;
+        min-width: 180px !important;
+        z-index: 1001 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transform: translateY(-10px) scale(0.95) !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        border: 1px solid rgba(0, 102, 102, 0.1) !important;
+    }
+
+    .dropdown-menu-custom.show {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) scale(1) !important;
+    }
+
+    .dropdown-item {
+        display: flex !important;
+        align-items: center !important;
+        padding: 12px 20px !important;
+        color: var(--text-dark) !important;
+        text-decoration: none !important;
+        font-size: 0.9rem !important;
+        font-weight: 500 !important;
+        transition: all 0.3s ease !important;
+        min-height: 44px !important;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background: rgba(0, 102, 102, 0.1) !important;
+        color: var(--primary-color) !important;
+    }
+
+    .dropdown-item i {
+        margin-right: 10px !important;
+        width: 16px !important;
+        color: var(--primary-color) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .dropdown-item.logout:hover,
+    .dropdown-item.logout:focus {
+        background: rgba(220, 53, 69, 0.1) !important;
+        color: #dc3545 !important;
+    }
+
+    .dropdown-item.logout:hover i,
+    .dropdown-item.logout:focus i {
+        color: #dc3545 !important;
+    }
+
+    .dropdown-divider {
+        height: 1px !important;
+        background: #e9ecef !important;
+        margin: 8px 0 !important;
+    }
+
+    /* Efecto táctil */
+    .nav-btn.touch-active {
+        transform: scale(0.95) translateY(-1px) !important;
+        opacity: 0.8 !important;
+    }
+
+    /* Ajustar contenido principal */
+    .main-content {
+        margin-top: var(--header-height-mobile) !important;
+        transition: margin-top 0.3s ease !important;
+    }
+}
+
+/* ===== MÓVILES PEQUEÑOS ===== */
+@media (max-width: 576px) {
+    .mi-navbar-principal {
+        padding: 6px 12px !important;
+        min-height: var(--header-height-small) !important;
+    }
+
+    .logo-sombrero {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .logo-text h1 {
+        font-size: 0.9rem !important;
+    }
+
+    .logo-text p {
+        font-size: 0.65rem !important;
+    }
+
+    .navbar-links-area {
+        gap: 6px !important;
+    }
+
+    .nav-btn {
+        min-width: 55px !important;
+        min-height: var(--nav-btn-size-small) !important;
+        padding: 6px 8px !important;
+    }
+
+    .nav-btn i {
+        font-size: 1.1rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    .nav-btn span {
+        font-size: 0.65rem !important;
+    }
+
+    .auth-btn {
+        min-width: 65px !important;
+    }
+
+    .user-name {
+        max-width: 50px !important;
+    }
+
+    .dropdown-menu-custom {
+        min-width: 160px !important;
+        right: -10px !important;
+    }
+
+    .main-content {
+        margin-top: var(--header-height-small) !important;
+    }
+}
+
+/* ===== MÓVILES EXTRA PEQUEÑOS ===== */
+@media (max-width: 480px) {
+    .mi-navbar-principal {
+        padding: 5px 10px !important;
+        min-height: 60px !important;
+    }
+
+    .logo-sombrero {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .logo-text h1 {
+        font-size: 0.85rem !important;
+    }
+
+    .logo-text p {
+        font-size: 0.6rem !important;
+    }
+
+    .navbar-links-area {
+        gap: 4px !important;
+    }
+
+    .nav-btn {
+        min-width: 50px !important;
+        min-height: 42px !important;
+        padding: 5px 6px !important;
+    }
+
+    .nav-btn i {
+        font-size: 1rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .nav-btn span {
+        font-size: 0.6rem !important;
+    }
+
+    .auth-btn {
+        min-width: 60px !important;
+    }
+
+    .user-name {
+        max-width: 45px !important;
+    }
+
+    .main-content {
+        margin-top: 60px !important;
+    }
+}
+
+/* ===== LANDSCAPE EN MÓVIL ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .mi-navbar-principal {
+        min-height: var(--header-height-landscape) !important;
+        padding: 5px 15px !important;
+    }
+
+    .logo-sombrero {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .logo-text h1 {
+        font-size: 0.9rem !important;
+    }
+
+    .logo-text p {
+        display: none !important;
+    }
+
+    .nav-btn {
+        min-height: var(--nav-btn-size-small) !important;
+        padding: 6px 10px !important;
+    }
+
+    .nav-btn i {
+        font-size: 1.1rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .nav-btn span {
+        font-size: 0.65rem !important;
+    }
+
+    .main-content {
+        margin-top: var(--header-height-landscape) !important;
+    }
+}
+
+/* ===== MEJORAS DE ACCESIBILIDAD ===== */
+@media (max-width: 768px) {
+
+    /* Focus mejorado */
+    .nav-btn:focus,
+    .dropdown-item:focus {
+        outline: 2px solid var(--primary-color) !important;
+        outline-offset: 2px !important;
+    }
+
+    /* Reducir animaciones para usuarios que prefieren menos movimiento */
+    @media (prefers-reduced-motion: reduce) {
+
+        .mi-navbar-principal,
+        .nav-btn,
+        .dropdown-menu-custom,
+        .dropdown-arrow {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+
+    /* Alto contraste */
+    @media (prefers-contrast: high) {
+        .mi-navbar-principal {
+            background: white !important;
+            border-bottom: 2px solid var(--primary-color) !important;
+        }
+
+        .nav-btn {
+            border: 1px solid var(--primary-color) !important;
+        }
+
+        .auth-btn {
+            border: 2px solid white !important;
+        }
+    }
+}
+
+/* ===== OPTIMIZACIONES PARA IOS ===== */
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 768px) {
+        .mi-navbar-principal {
+            -webkit-backdrop-filter: blur(10px) !important;
+            backdrop-filter: blur(10px) !important;
+        }
+
+        .nav-btn {
+            -webkit-tap-highlight-color: rgba(0, 102, 102, 0.2) !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+
+
+        .navbar-links-area {
+            -webkit-overflow-scrolling: touch !important;
+        }
+    }
+}
+
+/* ===== ANIMACIONES ESPECÍFICAS ===== */
+@keyframes headerSlideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes buttonPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .mi-navbar-principal {
+        animation: headerSlideDown 0.5s ease-out !important;
+    }
+
+    .dropdown-menu-custom.show {
+        animation: dropdownFadeIn 0.3s ease-out !important;
+    }
+
+    .nav-btn.active {
+        animation: buttonPulse 0.6s ease-in-out !important;
+    }
+}
+
+/* ===== DEBUG: VERIFICACIÓN DE ENLACES CORRECTOS ===== */
+@media (max-width: 768px) {
+
+    /* Asegurar que el botón de login tenga el href correcto */
+    a[href="auth.php"].login-btn::after {
+        content: "✓ Login OK" !important;
+        position: absolute !important;
+        top: -20px !important;
+        left: 0 !important;
+        font-size: 8px !important;
+        color: green !important;
+        background: white !important;
+        padding: 2px !important;
+        border-radius: 2px !important;
+        display: none !important;
+        /* Oculto por defecto, activar para debug */
+    }
+
+    /* Asegurar que el botón de registro tenga el href correcto */
+    a[href="auth.php#registro"].register-btn::after {
+        content: "✓ Registro OK" !important;
+        position: absolute !important;
+        top: -20px !important;
+        left: 0 !important;
+        font-size: 8px !important;
+        color: blue !important;
+        background: white !important;
+        padding: 2px !important;
+        border-radius: 2px !important;
+        display: none !important;
+        /* Oculto por defecto, activar para debug */
+    }
+
+    /* Prevenir cualquier intercambio de posiciones */
+    .login-btn {
+        z-index: 10 !important;
+    }
+
+    .register-btn {
+        z-index: 9 !important;
+    }
+}
+
+/*
+ ===== MENÚ HAMBURGUESA PARA USUARIOS LOGUEADOS ===== */
+@media (max-width: 768px) {
+
+    /* Botón hamburguesa visible solo en móvil */
+    .btn-menu-movil {
+        display: block !important;
+        background: none !important;
+        border: none !important;
+        color: #006666 !important;
+        font-size: 1.5rem !important;
+        cursor: pointer !important;
+        padding: 8px !important;
+        border-radius: 8px !important;
+        transition: all 0.3s ease !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        -webkit-tap-highlight-color: rgba(0, 102, 102, 0.2) !important;
+    }
+
+    .btn-menu-movil:hover,
+    .btn-menu-movil:active {
+        background: rgba(0, 102, 102, 0.1) !important;
+        transform: scale(0.95) !important;
+    }
+
+    .btn-menu-movil i {
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Ocultar navegación por defecto en móvil */
+    .navbar-links-area {
+        position: fixed !important;
+        top: var(--header-height-mobile) !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: white !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 20px 15px !important;
+        max-height: calc(100vh - var(--header-height-mobile)) !important;
+        overflow-y: auto !important;
+        transform: translateX(-100%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 999 !important;
+    }
+
+    /* Mostrar menú cuando está activo */
+    .navbar-links-area.mobile-active {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Botones de navegación en menú móvil */
+    .navbar-links-area .nav-btn {
+        width: 100% !important;
+        padding: 15px 20px !important;
+        margin: 5px 0 !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        color: #333 !important;
+        background: rgba(0, 102, 102, 0.05) !important;
+        transition: all 0.3s ease !important;
+        min-height: 56px !important;
+        text-decoration: none !important;
+    }
+
+    .navbar-links-area .nav-btn i {
+        font-size: 1.3rem !important;
+        color: #006666 !important;
+        width: 30px !important;
+        text-align: center !important;
+    }
+
+    .navbar-links-area .nav-btn:hover,
+    .navbar-links-area .nav-btn:active {
+        background: rgba(0, 102, 102, 0.15) !important;
+        color: #006666 !important;
+        transform: translateX(5px) !important;
+    }
+
+    .navbar-links-area .nav-btn.active {
+        background: linear-gradient(135deg, #006666, #004d4d) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3) !important;
+    }
+
+    .navbar-links-area .nav-btn.active i {
+        color: white !important;
+    }
+
+    /* ===== SECCIÓN DE USUARIO EN MENÚ MÓVIL ===== */
+    .navbar-links-area .user-dropdown {
+        width: 100% !important;
+        margin-top: 15px !important;
+        padding-top: 15px !important;
+        border-top: 2px solid rgba(0, 102, 102, 0.2) !important;
+    }
+
+    /* Botón de usuario en menú móvil */
+    .navbar-links-area .user-btn {
+        width: 100% !important;
+        padding: 18px 20px !important;
+        background: linear-gradient(135deg, #006666, #004d4d) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3) !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        min-height: 60px !important;
+    }
+
+    .navbar-links-area .user-btn:hover,
+    .navbar-links-area .user-btn:active {
+        background: linear-gradient(135deg, #004d4d, #006666) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(0, 102, 102, 0.4) !important;
+    }
+
+    .navbar-links-area .user-btn i {
+        color: white !important;
+    }
+
+    .navbar-links-area .user-name {
+        flex: 1 !important;
+        text-align: left !important;
+        margin: 0 10px !important;
+        max-width: none !important;
+        overflow: visible !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+
+    .navbar-links-area .dropdown-arrow {
+        font-size: 1rem !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Dropdown de usuario en menú móvil */
+    .navbar-links-area .dropdown-menu-custom {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        background: rgba(0, 102, 102, 0.05) !important;
+        border: 2px solid rgba(0, 102, 102, 0.2) !important;
+        border-radius: 12px !important;
+        margin-top: 10px !important;
+        padding: 10px !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.3s ease, padding 0.3s ease !important;
+    }
+
+    .navbar-links-area .dropdown-menu-custom.show {
+        max-height: 500px !important;
+        padding: 10px !important;
+    }
+
+    .navbar-links-area .dropdown-item {
+        padding: 15px 20px !important;
+        margin: 5px 0 !important;
+        border-radius: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        color: #333 !important;
+        background: white !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+        min-height: 52px !important;
+    }
+
+    .navbar-links-area .dropdown-item i {
+        font-size: 1.2rem !important;
+        color: #006666 !important;
+        width: 30px !important;
+        text-align: center !important;
+    }
+
+    .navbar-links-area .dropdown-item:hover,
+    .navbar-links-area .dropdown-item:active {
+        background: rgba(0, 102, 102, 0.1) !important;
+        color: #006666 !important;
+        transform: translateX(5px) !important;
+    }
+
+    .navbar-links-area .dropdown-item.logout {
+        background: rgba(220, 53, 69, 0.1) !important;
+        color: #dc3545 !important;
+    }
+
+    .navbar-links-area .dropdown-item.logout i {
+        color: #dc3545 !important;
+    }
+
+    .navbar-links-area .dropdown-item.logout:hover,
+    .navbar-links-area .dropdown-item.logout:active {
+        background: rgba(220, 53, 69, 0.2) !important;
+        color: #dc3545 !important;
+    }
+
+    .navbar-links-area .dropdown-divider {
+        height: 2px !important;
+        background: rgba(0, 102, 102, 0.2) !important;
+        margin: 10px 0 !important;
+    }
+
+    /* Botones de autenticación en menú móvil (cuando no está logueado) */
+    .navbar-links-area .auth-btn {
+        width: 100% !important;
+        padding: 16px 20px !important;
+        margin: 8px 0 !important;
+        border-radius: 12px !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        min-height: 56px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+
+    .navbar-links-area .login-btn {
+        background: linear-gradient(135deg, #006666, #004d4d) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3) !important;
+    }
+
+    .navbar-links-area .login-btn:hover,
+    .navbar-links-area .login-btn:active {
+        background: linear-gradient(135deg, #004d4d, #006666) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(0, 102, 102, 0.4) !important;
+    }
+
+    .navbar-links-area .register-btn {
+        background: linear-gradient(135deg, #CC5500, #FF6B6B) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(204, 85, 0, 0.3) !important;
+    }
+
+    .navbar-links-area .register-btn:hover,
+    .navbar-links-area .register-btn:active {
+        background: linear-gradient(135deg, #FF6B6B, #CC5500) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(204, 85, 0, 0.4) !important;
+    }
+
+    /* Overlay oscuro cuando el menú está abierto */
+    .navbar-links-area.mobile-active::before {
+        content: '' !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+        z-index: -1 !important;
+        animation: fadeIn 0.3s ease !important;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Ajustar contenido principal */
+    .main-content {
+        margin-top: var(--header-height-mobile) !important;
+    }
+}
+
+/* ===== MÓVILES PEQUEÑOS ===== */
+@media (max-width: 576px) {
+    .mi-navbar-principal {
+        padding: 6px 12px !important;
+        min-height: var(--header-height-small) !important;
+    }
+
+    .navbar-links-area {
+        top: var(--header-height-small) !important;
+        max-height: calc(100vh - var(--header-height-small)) !important;
+    }
+
+    .main-content {
+        margin-top: var(--header-height-small) !important;
+    }
+}
+
+/* ===== OCULTAR BOTÓN HAMBURGUESA EN DESKTOP ===== */
+@media (min-width: 769px) {
+    .btn-menu-movil {
+        display: none !important;
+    }
+    
+    /* Ocultar botón Mi Panel en desktop (ya está en el dropdown) */
+    .mobile-panel-btn {
+        display: none !important;
+    }
+
+    .navbar-links-area {
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        flex-direction: row !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+}

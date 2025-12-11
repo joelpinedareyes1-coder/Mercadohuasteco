@@ -1,0 +1,917 @@
+/**
+ * ESTILOS DEL DIRECTORIO - Mercado Huasteco
+ * Diseño moderno y responsivo para la página de directorio
+ */
+
+/* ===== HERO SECTION DEL DIRECTORIO ===== */
+.directorio-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 4rem 0 3rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.directorio-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="300" r="150" fill="url(%23a)"/><circle cx="800" cy="200" r="100" fill="url(%23a)"/></svg>');
+    opacity: 0.3;
+}
+
+.directorio-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.directorio-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.directorio-hero .lead {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ===== BREADCRUMB MODERNO ===== */
+.breadcrumb-modern {
+    background: transparent;
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+.breadcrumb-modern .breadcrumb {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+}
+
+.breadcrumb-modern .breadcrumb-item {
+    font-weight: 500;
+}
+
+.breadcrumb-modern .breadcrumb-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-modern .breadcrumb-item a:hover {
+    color: var(--secondary-color);
+}
+
+.breadcrumb-modern .breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* ===== FILTROS Y BÚSQUEDA ===== */
+.search-filters {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.search-filters h5 {
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid #e9ecef;
+    color: var(--text-secondary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 102, 0.15);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3);
+}
+
+.filter-btn .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.search-input-modern {
+    border: 2px solid #e9ecef;
+    border-radius: 25px;
+    padding: 0.75rem 3rem 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input-modern:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 102, 102, 0.1);
+    outline: none;
+}
+
+/* ===== TARJETAS DE TIENDAS MODERNAS ===== */
+.tienda-card-modern {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tienda-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.tienda-card-modern.destacada {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 5px 25px rgba(255, 107, 107, 0.2);
+}
+
+.tienda-image-modern {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tienda-image-modern::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tienda-card-modern:hover .tienda-image-modern::after {
+    opacity: 1;
+}
+
+.tienda-placeholder {
+    height: 220px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.tienda-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.tienda-placeholder span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.badge-destacada {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    z-index: 5;
+}
+
+.tienda-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tienda-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.tienda-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.tienda-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.tienda-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars-modern {
+    color: #ffc107;
+}
+
+.tienda-category {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: rgba(0, 102, 102, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.tienda-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn-ver-tienda {
+    flex: 1;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-ver-tienda:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3);
+}
+
+.btn-visitar-directo {
+    flex: 1;
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-visitar-directo:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 102, 102, 0.2);
+}
+
+.btn-favorito-modern {
+    background: white;
+    border: 2px solid #e9ecef;
+    color: var(--text-secondary);
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.btn-favorito-modern:hover {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+.btn-favorito-modern.active {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    border-color: #ff6b6b;
+    color: white;
+}
+
+/* ===== NO RESULTS ===== */
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+.no-results i {
+    font-size: 5rem;
+    color: var(--text-secondary);
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.no-results h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.no-results p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== BOTÓN MI PANEL MÓVIL ===== */
+.mobile-panel-btn-directorio {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.mobile-panel-btn-directorio:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 102, 0.4);
+}
+
+/* ===== RESPONSIVE MÓVIL ===== */
+@media (max-width: 768px) {
+    .directorio-hero {
+        padding: 2.5rem 0 2rem;
+    }
+    
+    .directorio-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .directorio-hero .lead {
+        font-size: 1rem;
+    }
+    
+    .stats-number {
+        font-size: 2rem;
+    }
+    
+    .stats-label {
+        font-size: 0.8rem;
+    }
+    
+    .search-filters {
+        padding: 1.5rem;
+        margin-top: -2rem;
+        border-radius: 15px;
+    }
+    
+    .search-filters h5 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        margin: 0.25rem;
+    }
+    
+    .search-input-modern {
+        padding: 0.65rem 2.5rem 0.65rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    
+    .tienda-card-modern {
+        margin-bottom: 1.5rem;
+    }
+    
+    .tienda-image-modern,
+    .tienda-placeholder {
+        height: 180px;
+    }
+    
+    .tienda-content {
+        padding: 1.2rem;
+    }
+    
+    .tienda-title {
+        font-size: 1.2rem;
+    }
+    
+    .tienda-description {
+        font-size: 0.9rem;
+    }
+    
+    .tienda-actions {
+        flex-direction: column;
+    }
+    
+    .btn-ver-tienda,
+    .btn-visitar-directo {
+        width: 100%;
+        padding: 0.85rem 1rem;
+    }
+    
+    .btn-favorito-modern {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .no-results {
+        padding: 3rem 1.5rem;
+    }
+    
+    .no-results i {
+        font-size: 4rem;
+    }
+    
+    .no-results h3 {
+        font-size: 1.5rem;
+    }
+    
+    .no-results p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .directorio-hero h1 {
+        font-size: 1.7rem;
+    }
+    
+    .directorio-hero .lead {
+        font-size: 0.95rem;
+    }
+    
+    .stats-number {
+        font-size: 1.8rem;
+    }
+    
+    .search-filters {
+        padding: 1.2rem;
+    }
+    
+    .filter-btn {
+        font-size: 0.8rem;
+        padding: 0.45rem 0.85rem;
+    }
+    
+    .tienda-image-modern,
+    .tienda-placeholder {
+        height: 160px;
+    }
+    
+    .tienda-title {
+        font-size: 1.1rem;
+    }
+    
+    .badge-destacada {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tienda-card-modern {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 102, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 102, 102, 0.4);
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+
+/* ===== INSIGNIA PREMIUM VERIFICADO ===== */
+.badge-premium-verificado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    position: relative;
+    cursor: help;
+    animation: pulse-premium 2s ease-in-out infinite;
+}
+
+.badge-premium-verificado img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.4));
+}
+
+.badge-premium-verificado i {
+    display: none; /* Ocultar el icono de Font Awesome */
+}
+
+.badge-premium-verificado:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.6);
+}
+
+.badge-premium-verificado::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    animation: ripple-premium 2s ease-out infinite;
+}
+
+@keyframes pulse-premium {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(255, 215, 0, 0.7);
+    }
+}
+
+@keyframes ripple-premium {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Tooltip para la insignia */
+.badge-premium-verificado[title]:hover::before {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-bottom: 8px;
+    z-index: 1000;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.badge-premium-verificado[title]:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 2px;
+}
+
+/* Variante para tarjetas destacadas */
+.tienda-card-modern.destacada .badge-premium-verificado {
+    background: linear-gradient(135deg, #fff 0%, #fffbf0 100%);
+    border-color: #ffd700;
+}
+
+.tienda-card-modern.destacada .badge-premium-verificado i {
+    color: #ffd700;
+}
+
+
+/* ===== ANIMACIÓN DE ESTRELLITAS AL HACER CLIC ===== */
+.badge-premium-verificado {
+    transition: all 0.3s ease;
+}
+
+.badge-premium-verificado.clicked {
+    animation: bounce-premium 0.6s ease;
+}
+
+@keyframes bounce-premium {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.3) rotate(10deg); }
+    50% { transform: scale(0.9) rotate(-10deg); }
+    75% { transform: scale(1.2) rotate(5deg); }
+}
+
+/* Estrellitas que aparecen al hacer clic */
+.star-particle {
+    position: absolute;
+    pointer-events: none;
+    font-size: 20px;
+    animation: star-burst 1s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes star-burst {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(var(--tx), var(--ty)) scale(1) rotate(180deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(var(--tx) * 1.5), calc(var(--ty) * 1.5)) scale(0.5) rotate(360deg);
+    }
+}
+
+/* Efecto de brillo al hacer clic */
+.badge-premium-verificado::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.badge-premium-verificado.clicked::before {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    animation: shine-burst 0.6s ease-out;
+}
+
+@keyframes shine-burst {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    50% {
+        width: 80px;
+        height: 80px;
+        opacity: 0.8;
+    }
+    100% {
+        width: 120px;
+        height: 120px;
+        opacity: 0;
+    }
+}
+
+/* Partículas de confeti dorado */
+.confetti-particle {
+    position: absolute;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    border-radius: 50%;
+    animation: confetti-fall 1.2s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes confetti-fall {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--cx), var(--cy)) rotate(720deg);
+    }
+}
+
+
+/* ===== BOTÓN PREMIUM DIRECTO ===== */
+.btn-ver-tienda.premium-direct {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #000 !important;
+    font-weight: 700;
+    border: 2px solid #ffa500;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ver-tienda.premium-direct::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-ver-tienda.premium-direct:hover::before {
+    left: 100%;
+}
+
+.btn-ver-tienda.premium-direct:hover {
+    background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+
+.btn-ver-tienda.premium-direct i {
+    color: #000;
+}
+
+/* Animación de pulso para botón Premium */
+.btn-ver-tienda.premium-direct {
+    animation: pulse-premium-btn 2s ease-in-out infinite;
+}
+
+@keyframes pulse-premium-btn {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
+    }
+}
+
+
+/* ===== ESTRELLAS DE CALIFICACIÓN MEJORADAS ===== */
+.tienda-rating, .tienda-meta .tienda-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tienda-rating .stars-modern,
+.tienda-rating i.fa-star {
+    font-size: 16px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.tienda-rating i.fa-star.stars-modern,
+.tienda-rating i.fa-star:not(.text-muted) {
+    background: linear-gradient(135deg, #ffd700 0%, #ffc107 50%, #ff9800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: star-glow 2s ease-in-out infinite;
+}
+
+.tienda-rating i.fa-star.text-muted {
+    color: #e0e0e0;
+}
+
+.tienda-card-modern:hover .tienda-rating i.fa-star:not(.text-muted) {
+    transform: scale(1.1);
+    filter: drop-shadow(0 3px 8px rgba(255, 193, 7, 0.5));
+}
+
+@keyframes star-glow {
+    0%, 100% {
+        filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+    }
+    50% {
+        filter: drop-shadow(0 3px 8px rgba(255, 193, 7, 0.6));
+    }
+}
+
+/* Fallback para navegadores sin soporte de background-clip */
+@supports not (background-clip: text) {
+    .tienda-rating i.fa-star.stars-modern,
+    .tienda-rating i.fa-star:not(.text-muted) {
+        color: #ffc107;
+    }
+}
+
+/* ===== ESTILOS PARA ESTRELLAS DE CALIFICACIÓN ===== */
+.tienda-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}

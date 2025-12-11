@@ -1,0 +1,89 @@
+╔══════════════════════════════════════════════════════════════╗
+║     SISTEMA DE REPORTES DE TIENDAS - INSTALACIÓN RÁPIDA     ║
+╚══════════════════════════════════════════════════════════════╝
+
+📋 PASO 1: INSTALAR BASE DE DATOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Visita en tu navegador:
+👉 http://tu-dominio.com/ejecutar_crear_reportes.php
+
+Esto creará automáticamente la tabla "reportes_tienda".
+
+
+🧪 PASO 2: PROBAR EL SISTEMA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Ve a cualquier tienda
+2. Haz clic en el botón de la bandera 🚩
+3. Llena el formulario
+4. Envía el reporte
+
+
+👨‍💼 PASO 3: VER REPORTES (ADMIN)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Visita en tu navegador:
+👉 http://tu-dominio.com/admin_ver_reportes.php
+
+(Debes estar logueado como administrador)
+
+
+✅ ARCHIVOS CREADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ crear_tabla_reportes.sql
+✓ ejecutar_crear_reportes.php
+✓ procesar_reporte.php
+✓ admin_ver_reportes.php
+✓ tienda_detalle.php (modificado)
+
+
+📚 DOCUMENTACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lee los archivos:
+• SISTEMA_REPORTES_TIENDAS.md (documentación completa)
+• RESUMEN_SISTEMA_REPORTES.md (resumen visual)
+• AGREGAR_ENLACE_REPORTES_ADMIN.md (integración con dashboard)
+
+
+🎯 CARACTERÍSTICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Modal moderno para reportar
+✓ Validaciones completas
+✓ Panel de administración
+✓ Estadísticas en tiempo real
+✓ Filtros por estado
+✓ Prevención de spam
+✓ Seguridad implementada
+
+
+🔒 SEGURIDAD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Validación cliente y servidor
+✓ Prepared statements (PDO)
+✓ Prevención de SQL injection
+✓ Límite de 1 reporte cada 24 horas
+✓ Sanitización de entradas
+
+
+⚠️ REQUISITOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• PHP 7.4+
+• MySQL 5.7+
+• Bootstrap 5.3
+• Usuario admin configurado
+
+
+🎉 ¡LISTO!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+El sistema está completo y funcional.
+¡Tu plataforma ahora tiene moderación! 🚀
+
+
+💡 AYUDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Si tienes problemas:
+1. Revisa los logs de PHP
+2. Verifica que la tabla existe
+3. Confirma permisos de usuario admin
+4. Lee la documentación completa
+
+
+Desarrollado con ❤️ para Mercado Huasteco
