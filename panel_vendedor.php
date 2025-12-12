@@ -362,7 +362,7 @@ elseif ($usuario_info && !$es_premium_activo):
                                     ¡Lleva tu Tienda al Siguiente Nivel!
                                 </h2>
                                 <p style="color: rgba(255,255,255,0.9); margin: 0.5rem 0 0 0; font-size: 1.1rem;">
-                                    Desbloquea todas las funciones Premium por solo <strong>$250 MXN/mes</strong>
+                                    Desbloquea todas las funciones Premium por solo <strong>$150 MXN/mes</strong>
                                 </p>
                             </div>
                         </div>
@@ -408,7 +408,7 @@ elseif ($usuario_info && !$es_premium_activo):
                                 <i class="fas fa-crown"></i>
                             </div>
                             <div style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">
-                                $250 HUASTECOINS 🛒🤠                                   
+                                $150 HUASTECOINS 🛒🤠                                   
                             </div>
                             <div style="color: rgba(255,255,255,0.9); font-size: 1rem; margin-bottom: 1.5rem;">
                                 MXN / 30 días
